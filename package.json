@@ -2,7 +2,8 @@
   "author": "Potherca <ben@muze.nl>",
   "dependencies": {
     "@inrupt/solid-client": "^1.10.0",
-    "@inrupt/solid-client-authn-browser": "^1.9.1"
+    "@inrupt/solid-client-authn-browser": "^1.9.1",
+    "buffer": "^6.0.3"
   },
   "description": "Hello-World app for Solid Pod",
   "devDependencies": {
