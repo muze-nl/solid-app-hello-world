@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World | Solid App | Proof-of-Concept</title>
+</head>
+<body>
+<header>
+  <h2>Getting Started</h2>
+  <h3>with Inrupt JavaScript Client Libraries</h3>
+</header>
+<section id="login" class="panel">
+  <div class="row">
+    <label id="labelLogin" for="btnLogin">
+      1. Click the button to log into
+      <span id="solid_identity_provider">...provided by the JavaScript code...</span>:
+    </label>
+    <button name="btnLogin" id="btnLogin">Login</button>
+    <p id="labelStatus" class="labelStatus"></p>
+  </div>
+</section>
+
+<div id="write" class="panel">
+  <div class="row">
+    <form id="writeForm">
+      <label id="writelabel" for="name">2. Write your name: </label>
+      <input
+          type="text"
+          id="input_name"
+          name="name"
+          size="50"
+          placeholder="Your name here"
+      />
+      <button type="submit">
+        Write to Profile
+      </button>
+    </form>
+  </div>
+
+  <dl class="display">
+    <dt>Writing status:&nbsp</dt>
+    <dd id="labelWriteStatus" class="labelStatus">...not written yet...</dd>
+  </dl>
+</div>
+
+<div id="read" class="panel">
+  <div class="row">
+    <form id="readForm">
+      <label id="readlabel" for="webID">2. Read WebID:</label>
+      <input
+          id="webID"
+          name="webID"
+          pattern="https://.*"
+          placeholder="...not logged in yet - but enter any WebID to read from its profile..."
+          size="50"
+          type="url"
+          value="https://pod.inrupt.com/<username>/profile/card#me"
+      />
+      <button
+          id="btnRead"
+          name="btnRead"
+          type="submit"
+      >
+        Read Profile
+      </button>
+    </form>
+  </div>
+  <dl class="display">
+    <dt>Profile SolidDataset:</dt>
+    <dd id="labelProfile"></dd>
+    <dt>Formatted Name (FN):</dt>
+    <dd id="labelFN"></dd>
+    <dt>Role:</dt>
+    <dd id="labelRole"></dd>
+  </dl>
+</div>
+<script defer type="module" src="main.js"></script>
+</body>
+</html>
